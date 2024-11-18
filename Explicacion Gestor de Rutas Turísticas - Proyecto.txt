@@ -1,0 +1,67 @@
+Gestor de Rutas Turísticas - Proyecto en C++
+
+¿Qué hace este programa?
+
+- Agregar puntos turísticos en un mapa.
+- Conectar los puntos con curvas suaves (B-Spline).
+- Cambiar el color de los puntos y las rutas.
+- Seleccionar rutas para resaltarlas.
+- Interactuar con un mapa visual y gestionar rutas fácilmente.
+
+¿Cómo funciona el programa?
+
+Al iniciar
+El programa carga automáticamente la imagen mapa.png como fondo.
+Se crea una ruta inicial llamada "Ruta1" para empezar a agregar puntos.
+Interacción con el ratón
+
+Clic izquierdo: Agrega un punto turístico en la posición del ratón. El programa te pedirá que escribas el nombre del punto en la consola.
+Si haces clic en un punto existente, se seleccionará su ruta para resaltarla.
+Interacción con el teclado
+Tecla C: Cambia el color de los puntos turísticos actuales. Al presionarla, te pedirá que elijas un color:
+1: Rojo
+2: Verde
+3: Azul
+
+Curvas B-Spline:
+forma de la B-spline está determinada por un conjunto de puntos de control. Al ajustar estos puntos, se puede afinar la curva sin alterar toda la forma.
+
+Si una ruta tiene al menos 4 puntos, se genera automáticamente una curva suave que conecta los puntos.
+Resaltado de rutas
+Al seleccionar una ruta (haciendo clic en uno de sus puntos), esta se resalta cambiando su color a magenta, mientras que sus puntos cambian a cian.
+Código explicación:
+
+Clases principales
+1. PuntoTuristico
+Esta clase representa un punto turístico en el mapa, con un nombre, posición (en píxeles) y un color
+
+RutaTuristica:
+Una lista de puntos turísticos que define una ruta. Cada ruta tiene un nombre.
+
+GestorRutas:
+Es la clase principal que administra:
+
+La ventana de SFML y el mapa.
+Las rutas y los puntos turísticos.
+Los eventos del ratón y teclado.
+Dibujar curvas
+El programa usa un algoritmo de curvas B-Spline para crear trayectorias suaves entre los puntos de control de una ruta.
+
+
+Manejo de eventos
+Los clics y teclas capturados por SFML permiten interactuar con el mapa, agregar puntos y seleccionar rutas.
+Personalización
+Se Puede modificar el programa para:
+
+Cambiar el tamaño de la ventana.
+
+Usar diferentes colores o agregar más opciones.
+Implementar nuevas funcionalidades, como guardar y cargar rutas desde archivos.
+
+Ejemplo de uso:
+Ejecuta el programa.
+Haz clic en el mapa para agregar puntos turísticos. Escribe sus nombres en la consola.
+Presiona C para cambiar el color de los puntos si lo deseas.
+Haz clic en un punto turístico existente para resaltar su ruta.
+
+
